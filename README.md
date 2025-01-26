@@ -14,3 +14,4 @@ This project is licensed under the **GNU Affero General Public License Version 3
 ## Developer
 
 Serhat Pars - serhatpars@umaylabs.com
+serhatpars.net
