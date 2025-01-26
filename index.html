@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Şifre Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-controls">
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="tr">TR</button>
+                <button class="lang-btn active" data-lang="en">EN</button>
+            </div>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <h1 data-tr="Şifre Oluşturucu" data-en="Password Generator">Şifre Oluşturucu</h1>
+        
+        <div class="password-wrapper">
+            <input type="text" id="passwordResult" readonly>
+            <button id="copyButton" class="tooltip">
+                <i class="far fa-copy"></i>
+                <span class="tooltiptext" data-tr="Kopyala" data-en="Copy">Kopyala</span>
+            </button>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label data-tr="Şifre Uzunluğu" data-en="Password Length">Şifre Uzunluğu</label>
+                <input type="range" id="lengthSlider" min="8" max="32" value="16">
+                <span id="lengthValue">16</span>
+            </div>
+
+            <div class="setting">
+                <label data-tr="Büyük Harfler" data-en="Uppercase Letters">Büyük Harfler</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+
+            <div class="setting">
+                <label data-tr="Küçük Harfler" data-en="Lowercase Letters">Küçük Harfler</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+
+            <div class="setting">
+                <label data-tr="Sayılar" data-en="Numbers">Sayılar</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="setting">
+                <label data-tr="Özel Karakterler" data-en="Special Characters">Özel Karakterler</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <button id="generateBtn" data-tr="Şifre Oluştur" data-en="Generate Password">Şifre Oluştur</button>
+
+        <div class="strength-meter">
+            <label data-tr="Şifre Gücü" data-en="Password Strength">Şifre Gücü</label>
+            <div class="strength-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <button id="aboutBtn" class="about-btn">
+                <i class="fas fa-info-circle"></i> 
+                <span data-tr="Hakkında" data-en="About">Hakkında</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Şifre Oluşturucu Hakkında</h2>
+            <div class="modal-body">
+                <p>Bu uygulama güvenli şifreler oluşturmanıza yardımcı olur.</p>
+                <h3>Özellikler:</h3>
+                <ul>
+                    <li>8-32 karakter uzunluğunda şifre oluşturma</li>
+                    <li>Büyük/küçük harf, sayı ve özel karakter seçenekleri</li>
+                    <li>Şifre gücü göstergesi</li>
+                    <li>Tek tıkla kopyalama</li>
+                </ul>
+                <p class="version">Versiyon 1.0</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
